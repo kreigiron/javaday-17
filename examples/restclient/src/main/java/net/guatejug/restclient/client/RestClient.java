@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "rest-client", url = "http://localhost:56789")
 public interface RestClient {
 
-    @RequestMapping(path = "bar/foo", method = RequestMethod.GET)
-    public String getFoo();
+    @RequestMapping(path = "cosas/cosa", method = RequestMethod.GET)
+    public String getCosa();
 
 }

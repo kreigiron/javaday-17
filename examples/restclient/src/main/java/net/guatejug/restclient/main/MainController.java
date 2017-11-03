@@ -23,7 +23,7 @@ public class MainController {
     @RequestMapping("/")
     @ResponseBody
     public String foo() {
-        return restClient.getFoo();
+        return restClient.getCosa();
     }
 
     public static void main(String[] args) throws Exception {

@@ -43,7 +43,7 @@ public class RestClientTest {
     @Test
     public void getFoo() throws Exception {
 
-        stubFor(get(urlPathEqualTo("/bar/foo"))
+        stubFor(get(urlPathEqualTo("/cosas/cosa"))
                         .willReturn(ok().withBody("someThing")));
 
         final String responseBody = mainController.foo();
