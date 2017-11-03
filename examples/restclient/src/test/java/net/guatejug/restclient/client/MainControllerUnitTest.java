@@ -14,12 +14,13 @@ public class MainControllerUnitTest {
 
     private MainController mainController;
 
-    private RestClient restClient;
+    private RestClient restClient = Mockito.mock(RestClient.class);
 
     @Before
     public void setup(){
         Mockito.mock(RestClient.class);
         mainController = new MainController(restClient);
+        when(restClient.getCosa()).thenReturn("algunaCosa");
     }
 
     @Test
