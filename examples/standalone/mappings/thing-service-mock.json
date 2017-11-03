@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/cosas/cosa"
+    },
+    "response": {
+        "status": 200,
+        "body": "Cosa!",
+        "headers": {
+            "Content-Type": "text/plain"
+        }
+    }
+}
+

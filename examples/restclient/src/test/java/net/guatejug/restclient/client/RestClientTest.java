@@ -47,7 +47,7 @@ public class RestClientTest {
                         .willReturn(ok().withBody("someThing")));
 
         final String responseBody = mainController.foo();
-        assertThat(responseBody, is("someThing"));
+        assertThat(responseBody, is("Cosa!"));
     }
 
 }
