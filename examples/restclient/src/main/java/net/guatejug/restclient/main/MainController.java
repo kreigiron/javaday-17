@@ -17,16 +17,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableFeignClients(basePackages = "net.guatejug.restclient.client")
 @ConfigurationProperties()
 public class MainController {
-    @Autowired
+
     RestClient restClient;
+
+    public MainController(@Autowired RestClient restClient) {
+        this.restClient = restClient;
+    }
 
     @RequestMapping("/")
     @ResponseBody
-    public String foo() {
+    public String escribirCosa() {
         return restClient.getCosa();
     }
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(MainController.class, args);
     }
+
+
 }
