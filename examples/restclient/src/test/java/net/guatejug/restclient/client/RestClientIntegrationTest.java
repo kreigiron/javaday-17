@@ -38,7 +38,7 @@ public class RestClientIntegrationTest {
     }
 
     @Test
-    public void getFoo() throws Exception {
+    public void getCosa() throws Exception {
 
         stubFor(get(urlPathEqualTo("/cosas/cosa"))
                         .willReturn(ok().withBody("Cosa!")));

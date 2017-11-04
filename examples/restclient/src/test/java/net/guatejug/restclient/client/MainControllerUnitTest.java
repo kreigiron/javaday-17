@@ -13,6 +13,6 @@ public class MainControllerUnitTest {
 
     @Test
     public void testEscribirCosa() {
-        assertThat(mainController.escribirCosa(), is("algunaCosa") );
+        assertThat(mainController.escribirCosa(), is("algunaCosa"));
     }
 }

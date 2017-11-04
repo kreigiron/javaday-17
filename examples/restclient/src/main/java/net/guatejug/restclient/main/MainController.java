@@ -12,10 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@SpringBootApplication
-@EnableAutoConfiguration
 @EnableFeignClients(basePackages = "net.guatejug.restclient.client")
-@ConfigurationProperties()
+@EnableAutoConfiguration
 public class MainController {
 
     RestClient restClient;
@@ -29,10 +27,5 @@ public class MainController {
     public String escribirCosa() {
         return restClient.getCosa();
     }
-
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(MainController.class, args);
-    }
-
 
 }
